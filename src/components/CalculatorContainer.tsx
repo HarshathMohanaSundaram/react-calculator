@@ -1,9 +1,14 @@
-import '../style/common.css'
+import CalculatorButton from './CalculatorButton';
+import CalculatorInput from './CalculatorInput';
+import CalculatorResult from './CalculatorResult';
 
 const CalculatorContainer = () => {
   return (
     <div className='container'>
-      <h1>Simple Calculator</h1>
+      <h1 className='header'>Calculator</h1>
+      <CalculatorInput />
+      <CalculatorResult />
+      <CalculatorButton />
     </div>
   );
 } 
