@@ -1,8 +1,10 @@
+import { Textfit } from 'react-textfit';
+
 const CalculatorInput = () => {
   return(
-    <div className="inputContainer">
-        0
-    </div>
+    <Textfit mode="single" className="inputContainer">
+      0
+    </Textfit>
   );
 }
 

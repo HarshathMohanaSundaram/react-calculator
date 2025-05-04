@@ -1,27 +1,28 @@
 
-const inputButton = (val: number) => {
+const inputButton = (val: string) => {
   return(
-    <button className='inputButton'>
+    <button className={`inputButton ${val === "=" ? "equalsButton" : ""}`} >
       {val}
     </button>
   );
 }
 
+const buttons = [
+  ['CE','%','/','X'],
+  ['7','8','9','*'],
+  ['4','5','6','-'],
+  ['1','2','3','+'],
+  ['+/-','0','.','='],
+];
+
 const CalculatorButton = () => {
   return(
     <div className='buttonContainer'>
-      <div className='buttonLoopingContainer'>
-        {[1, 2, 3, 4].map((val) => inputButton(val))}
-      </div>
-      <div className='buttonLoopingContainer'>
-        {[1, 2, 3, 4].map((val) => inputButton(val))}
-      </div>
-      <div className='buttonLoopingContainer'>
-        {[1, 2, 3, 4].map((val) => inputButton(val))}
-      </div>
-      <div className='buttonLoopingContainer'>
-        {[1, 2, 3, 4].map((val) => inputButton(val))}
-      </div>
+      {buttons.map((val, index) => (
+        <div className="buttonLoopingContainer" key={index}>
+          {val.map((buttonValue) => inputButton(buttonValue))}
+        </div>
+      ))}
     </div>
   );
 }
