@@ -1,18 +1,18 @@
 
 const inputButton = (val: string) => {
   return(
-    <button className={`inputButton ${val === "=" ? "equalsButton" : ""}`} >
+    <button className={`inputButton ${val === "=" ? "equalsButton" : ""}`} key={val} >
       {val}
     </button>
   );
 }
 
 const buttons = [
-  ['CE','%','/','X'],
+  ['CE','C','/','X'],
   ['7','8','9','*'],
   ['4','5','6','-'],
   ['1','2','3','+'],
-  ['+/-','0','.','='],
+  ['0','%','.','='],
 ];
 
 const CalculatorButton = () => {
