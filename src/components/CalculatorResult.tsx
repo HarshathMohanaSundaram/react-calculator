@@ -1,8 +1,8 @@
+import InputDisplayContainer from "./InputDisplayContainer";
+
 const CalculatorResult = () => {
   return(
-    <div className='resultContainer'>
-      0
-    </div>
+    <InputDisplayContainer value='0' />
   );
 }
 
